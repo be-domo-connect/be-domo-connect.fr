@@ -1,0 +1,170 @@
+/* Police de base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Fond blanc */
+}
+
+/* En-tête avec logo centré et texte en dessous */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.header-container {
+    text-align: center;
+}
+
+.logo {
+    width: 200px; /* Taille spécifique du logo */
+    height: 200px;
+    border-radius: 50%; /* Pour arrondir l'image du logo */
+    object-fit: cover; /* S'assure que l'image est bien centrée */
+    margin-bottom: 20px;
+}
+
+h1, h2, p {
+    font-weight: bold; /* Tout le texte est en gras */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50; /* Couleur verte pour le texte */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem; /* Taille un peu plus petite que "Bienvenue chez Domo Connect" */
+    color: #333; /* Couleur plus neutre */
+    margin-bottom: 10px;
+}
+
+/* Style du texte d'introduction */
+.intro-text {
+    font-size: 12px; /* Taille de police à 12px */
+    color: #555; /* Couleur plus douce pour un meilleur contraste */
+    max-width: 800px; /* Largeur maximale pour ne pas être trop large */
+    line-height: 1.5; /* Espacement entre les lignes pour une meilleure lisibilité */
+    text-align: center;
+    margin-bottom: 40px; /* Espace entre ce texte et le carrousel */
+}
+
+/* Carrousel d'images */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 50px 0;
+}
+
+.carousel {
+    display: flex;
+    animation: slide 18s infinite; /* Animation plus longue pour les 6 images */
+}
+
+.carousel img {
+    width: 100vw; /* Largeur de l'écran pour que les images occupent toute la largeur */
+    height: auto;
+    display: block;
+}
+
+/* Animation des images */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    16.66% { transform: translateX(-100vw); }
+    33.33% { transform: translateX(-200vw); }
+    50% { transform: translateX(-300vw); }
+    66.66% { transform: translateX(-400vw); }
+    83.33% { transform: translateX(-500vw); }
+    100% { transform: translateX(0); }
+}
+
+/* Section "Nos Services" */
+#services {
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f0f0; /* Fond gris clair */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet 3D */
+    overflow: hidden; /* Cache les débordements */
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.services-list {
+    animation: fadeIn 2s ease-in-out; /* Animation pour l'apparition des services */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#services p.services-item {
+    font-size: 14px; /* Taille de police augmentée */
+    font-style: italic; /* Italique */
+    font-weight: bold; /* Gras */
+    color: #333; /* Couleur sombre */
+    margin: 10px 0; /* Espacement entre les lignes */
+    animation: slideIn 1.5s forwards; /* Animation d'entrée */
+}
+
+/* Animation de chaque service */
+@keyframes slideIn {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Section Contact */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    margin: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: #333;
+    animation: fadeIn 1.5s forwards; /* Animation d'entrée pour le contact */
+}
+
+.contact-item i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #4CAF50; /* Couleur verte pour l'icône */
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
